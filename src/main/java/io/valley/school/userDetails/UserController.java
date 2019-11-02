@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.valley.school.config.JwtTokenUtil;
+import io.valley.school.model.UserVOMongo;
 import io.valley.school.userDetails.UserVO;
 
 
@@ -21,6 +22,9 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private UserServiceMongo  userServiceMongo;
 	
 	@Autowired
 	private JwtTokenUtil jwtTokenUtil;
@@ -50,14 +54,14 @@ public class UserController {
 	
 	@CrossOrigin
 	@RequestMapping("/users/{foo}")
-	public UserVO getUser(@PathVariable("foo") String id) {
-		return userService.getUser(id);
+	public UserVOMongo getUser(@PathVariable("foo") String id) {
+		return userServiceMongo.getUser(id);
 	}
 	
 	@CrossOrigin
 	@RequestMapping(method=RequestMethod.POST, value="/users")
-	public void addUser(@RequestBody UserVO user) {
-		userService.addUser(user);
+	public void addUser(@RequestBody UserVOMongo user) {
+		userServiceMongo.addNewUser(user);
 	}
 	
 	@CrossOrigin
