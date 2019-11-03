@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.valley.school</groupId>
-	<artifactId>valley-schools-userDetails</artifactId>
+	<artifactId>valley-schools-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>valley-schools-userDetails</name>
+	<name>valley-schools-backend</name>
 	<description>Demo project for Spring Boot Microservices</description>
 
 	<properties>

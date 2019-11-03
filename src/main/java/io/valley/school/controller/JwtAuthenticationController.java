@@ -2,8 +2,6 @@ package io.valley.school.controller;
 
 import java.util.Objects;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.valley.school.config.JwtTokenUtil;
 import io.valley.school.model.JwtRequest;
 import io.valley.school.model.JwtResponse;
-import io.valley.school.userDetails.UserVO;
+import io.valley.school.model.UserVO;
 
 @RestController
 @CrossOrigin

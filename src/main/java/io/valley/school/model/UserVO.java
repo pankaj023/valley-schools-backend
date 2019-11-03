@@ -1,9 +1,9 @@
-package io.valley.school.userDetails;
+package io.valley.school.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document
 public class UserVO {
 	@Id
 	private String userName;
