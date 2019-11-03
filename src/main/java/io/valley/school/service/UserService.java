@@ -18,6 +18,7 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	@Autowired
+	
 	private MongoTemplate mongoTemplate;
 
 	public List<UserVO> getAllUsers(){
